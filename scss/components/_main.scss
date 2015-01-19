@@ -1,1 +1,34 @@
 /* This is our main file for css/sass */
+/*
+For each element, consider:
+-what are you targeting
+-transition
+-easing
+*/
+
+body{
+    background-color: $background;
+    font-family: sans-serif;
+}
+
+.primary-btn{
+    @include button($primary, #fff, $primary-dark);
+}
+
+.secondary-btn{
+    @include button($secondary, #000, $secondary-dark);
+}
+
+.border{
+    border: 1px solid $secondary-dark;
+    p{
+        color: green;
+    }
+}
+
+ul{
+    @extend .border;
+}
+
+
+
